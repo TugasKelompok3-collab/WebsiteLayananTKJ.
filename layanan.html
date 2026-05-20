@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layanan TKJ</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#0f172a,#1e293b);
+            color:white;
+        }
+
+        header{
+            text-align:center;
+            padding:20px;
+            background:#111827;
+        }
+
+        .logo{
+            width:60px;
+            border-radius:10px;
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:10px;
+            padding:10px;
+            background:#1f2937;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:8px 12px;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:#3b82f6;
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:15px;
+            padding:20px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.07);
+            backdrop-filter:blur(10px);
+            padding:18px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-6px);
+            box-shadow:0 15px 30px rgba(59,130,246,0.3);
+        }
+
+        .highlight{
+            grid-column:span 2;
+            background:rgba(59,130,246,0.15);
+            border-left:4px solid #3b82f6;
+        }
+
+        .badge{
+            display:inline-block;
+            padding:4px 10px;
+            font-size:12px;
+            border-radius:20px;
+            background:#3b82f6;
+            margin-bottom:8px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:10px;
+            padding:8px 12px;
+            background:#22c55e;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#16a34a;
+            transform:scale(1.05);
+        }
+
+        footer{
+            text-align:center;
+            padding:15px;
+            background:#111827;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpeg" class="logo">
+    <h1>🛠 Layanan TKJ</h1>
+    <p>Teknik Komputer & Jaringan System</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="visimisi.html">🎯 Visi Misi</a>
+    <a href="layanan.html" class="active">🛠 Layanan</a>
+    <a href="kegiatan.html">🏢 Kegiatan</a>
+    <a href="request.html">📩 Request</a>
+    <a href="admin.html">🖥 Admin</a>
+    <a href="faq.html">❓ FAQ</a>
+</nav>
+
+<div class="container">
+
+    <!-- INTRO -->
+    <div class="card highlight">
+        <h2>📋 Daftar Layanan TKJ</h2>
+        <p>
+            Kami menyediakan layanan komputer & jaringan profesional
+            dengan sistem cepat, aman, dan terstruktur.
+        </p>
+    </div>
+
+    <!-- SERVICE 1 -->
+    <div class="card">
+        <span class="badge">💻 OS</span>
+        <h3>Install Windows</h3>
+
+        <p>
+            ⏱ Waktu: 30–60 menit <br>
+            💰 Harga: Rp 20.000 – 50.000 <br>
+            ⭐ Level: Mudah <br>
+            📌 Status: Tersedia
+        </p>
+
+        <a class="btn" href="request.html">Request</a>
+    </div>
+
+    <!-- SERVICE 2 -->
+    <div class="card">
+        <span class="badge">🖥 Repair</span>
+        <h3>Perbaikan PC</h3>
+
+        <p>
+            ⏱ Waktu: 1–2 jam <br>
+            💰 Harga: Rp 30.000 – 100.000 <br>
+            ⭐ Level: Sedang <br>
+            📌 Status: Tersedia
+        </p>
+
+        <a class="btn" href="request.html">Request</a>
+    </div>
+
+    <!-- SERVICE 3 -->
+    <div class="card">
+        <span class="badge">🌐 Network</span>
+        <h3>Instalasi Jaringan</h3>
+
+        <p>
+            ⏱ Waktu: 2–3 jam <br>
+            💰 Harga: Rp 50.000 – 150.000 <br>
+            ⭐ Level: Sedang <br>
+            📌 Status: Tersedia
+        </p>
+
+        <a class="btn" href="request.html">Request</a>
+    </div>
+
+    <!-- SERVICE 4 -->
+    <div class="card">
+        <span class="badge">🏫 Lab</span>
+        <h3>Maintenance Lab</h3>
+
+        <p>
+            ⏱ Waktu: Harian <br>
+            💰 Harga: Rp 100.000 / bulan <br>
+            ⭐ Level: Mudah <br>
+            📌 Status: Aktif
+        </p>
+
+        <a class="btn" href="request.html">Request</a>
+    </div>
+
+    <!-- INFO BOX -->
+    <div class="card highlight">
+        <h2>⚡ Catatan Layanan</h2>
+        <p>
+            ✔ Semua layanan bisa direquest langsung <br>
+            ✔ Waktu pengerjaan bisa berubah tergantung kondisi <br>
+            ✔ Sistem prioritas untuk request masuk lebih dulu <br>
+            ✔ Support full teknisi TKJ sekolah
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 TKJ Service System
+</footer>
+
+</body>
+</html>

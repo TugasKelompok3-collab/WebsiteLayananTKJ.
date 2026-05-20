@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ TKJ</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#0f172a,#1e293b);
+            color:white;
+        }
+
+        header{
+            text-align:center;
+            padding:20px;
+            background:#111827;
+        }
+
+        .logo{
+            width:60px;
+            border-radius:10px;
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:10px;
+            padding:10px;
+            background:#1f2937;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:8px 12px;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:#3b82f6;
+        }
+
+        .container{
+            max-width:800px;
+            margin:auto;
+            padding:20px;
+        }
+
+        .faq-item{
+            background:rgba(255,255,255,0.07);
+            margin-bottom:10px;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .faq-question{
+            padding:15px;
+            cursor:pointer;
+            font-weight:bold;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:#1e293b;
+        }
+
+        .faq-answer{
+            padding:15px;
+            display:none;
+            background:rgba(255,255,255,0.05);
+        }
+
+        .icon{
+            transition:0.3s;
+        }
+
+        footer{
+            text-align:center;
+            padding:15px;
+            background:#111827;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpeg" class="logo">
+    <h1>❓ FAQ TKJ</h1>
+    <p>Pertanyaan yang sering ditanyakan</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="visimisi.html">🎯 Visi Misi</a>
+    <a href="layanan.html">🛠 Layanan</a>
+    <a href="kegiatan.html">🏢 Kegiatan</a>
+    <a href="request.html">📩 Request</a>
+    <a href="admin.html">🖥 Admin</a>
+    <a href="faq.html" class="active">❓ FAQ</a>
+</nav>
+
+<div class="container">
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggle(this)">
+            Berapa lama instal Windows?
+            <span class="icon">➕</span>
+        </div>
+        <div class="faq-answer">
+            Biasanya sekitar 30–60 menit tergantung spesifikasi komputer.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggle(this)">
+            Apakah bisa panggilan ke kelas?
+            <span class="icon">➕</span>
+        </div>
+        <div class="faq-answer">
+            Bisa, teknisi TKJ siap datang ke kelas atau lab sesuai kebutuhan.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggle(this)">
+            Apakah layanan ini berbayar?
+            <span class="icon">➕</span>
+        </div>
+        <div class="faq-answer">
+            Sebagian layanan gratis (internal sekolah), sebagian berbayar tergantung jenis pekerjaan.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggle(this)">
+            Bisa request jaringan baru?
+            <span class="icon">➕</span>
+        </div>
+        <div class="faq-answer">
+            Bisa, tinggal isi form request di menu Request dan teknisi akan memprosesnya.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggle(this)">
+            Siapa yang mengelola layanan TKJ?
+            <span class="icon">➕</span>
+        </div>
+        <div class="faq-answer">
+            Layanan dikelola oleh tim TKJ sekolah yang berpengalaman di bidang komputer dan jaringan.
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 FAQ TKJ System
+</footer>
+
+<script>
+function toggle(el){
+    let answer = el.nextElementSibling;
+    let icon = el.querySelector(".icon");
+
+    if(answer.style.display === "block"){
+        answer.style.display = "none";
+        icon.innerHTML = "➕";
+    } else {
+        answer.style.display = "block";
+        icon.innerHTML = "➖";
+    }
+}
+</script>
+
+</body>
+</html>

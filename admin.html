@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin TKJ Dashboard</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#0f172a,#1e293b);
+            color:white;
+        }
+
+        header{
+            text-align:center;
+            padding:20px;
+            background:#111827;
+        }
+
+        .logo{
+            width:60px;
+            border-radius:10px;
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:10px;
+            padding:10px;
+            background:#1f2937;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:8px 12px;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:#3b82f6;
+        }
+
+        .container{
+            padding:20px;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:15px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.07);
+            backdrop-filter:blur(10px);
+            padding:18px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:10px;
+            margin-top:10px;
+        }
+
+        .box{
+            background:#1e293b;
+            padding:15px;
+            border-radius:10px;
+            text-align:center;
+            transition:0.3s;
+        }
+
+        .box:hover{
+            transform:scale(1.05);
+            background:#334155;
+        }
+
+        .box h2{
+            margin:0;
+            color:#60a5fa;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:10px;
+            font-size:14px;
+        }
+
+        th,td{
+            padding:10px;
+            border-bottom:1px solid rgba(255,255,255,0.1);
+            text-align:left;
+        }
+
+        tr:hover{
+            background:rgba(59,130,246,0.2);
+        }
+
+        .badge{
+            padding:4px 10px;
+            border-radius:20px;
+            font-size:12px;
+        }
+
+        .proses{
+            background:#f59e0b;
+        }
+
+        .selesai{
+            background:#22c55e;
+        }
+
+        footer{
+            text-align:center;
+            padding:15px;
+            background:#111827;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpeg" class="logo">
+    <h1>🖥 Admin Dashboard TKJ</h1>
+    <p>Panel Pengelolaan Sistem Layanan TKJ</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="visimisi.html">🎯 Visi Misi</a>
+    <a href="layanan.html">🛠 Layanan</a>
+    <a href="kegiatan.html">🏢 Kegiatan</a>
+    <a href="request.html">📩 Request</a>
+    <a href="admin.html" class="active">🖥 Admin</a>
+    <a href="faq.html">❓ FAQ</a>
+</nav>
+
+<div class="container">
+
+    <!-- STATISTIK -->
+    <div class="card" style="grid-column:span 2;">
+        <h2>📊 Statistik Sistem TKJ</h2>
+
+        <div class="stats">
+
+            <div class="box">
+                <h2>128</h2>
+                <p>PC Ditangani</p>
+            </div>
+
+            <div class="box">
+                <h2>42</h2>
+                <p>Jaringan Dibuat</p>
+            </div>
+
+            <div class="box">
+                <h2>95%</h2>
+                <p>Success Rate</p>
+            </div>
+
+        </div>
+
+        <p style="margin-top:15px;">
+            ⚡ Status Sistem: Online <br>
+            🔧 Rata-rata pengerjaan: 1–2 jam <br>
+            🖥 Monitoring: Aktif
+        </p>
+    </div>
+
+    <!-- QUICK INFO -->
+    <div class="card">
+        <h2>⚡ Quick Info</h2>
+        <p>
+            📩 Total Request: 5 <br>
+            🔄 Diproses: 2 <br>
+            ✔ Selesai: 3 <br>
+            ❗ Pending: 0
+        </p>
+    </div>
+
+    <!-- DATA REQUEST -->
+    <div class="card" style="grid-column:span 3;">
+        <h2>📋 Data Request Masuk</h2>
+
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>Kelas</th>
+                <th>Layanan</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Illo Alfi F.</td>
+                <td>X TKJ 1</td>
+                <td>Install Windows</td>
+                <td><span class="badge proses">Diproses</span></td>
+            </tr>
+
+            <tr>
+                <td>Yogi Nanda S.</td>
+                <td>X TKJ 2</td>
+                <td>Perbaikan PC</td>
+                <td><span class="badge selesai">Selesai</span></td>
+            </tr>
+
+            <tr>
+                <td>Dimas Reyfan</td>
+                <td>X TKJ 2</td>
+                <td>Instalasi Jaringan</td>
+                <td><span class="badge selesai">Selesai</span></td>
+            </tr>
+
+            <tr>
+                <td>Jelita Dwi</td>
+                <td>X TKJ 3</td>
+                <td>Maintenance Lab</td>
+                <td><span class="badge proses">Diproses</span></td>
+            </tr>
+
+            <tr>
+                <td>Julia Nur M.</td>
+                <td>X TKJ 1</td>
+                <td>Hardware Repair</td>
+                <td><span class="badge selesai">Selesai</span></td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Admin TKJ System
+</footer>
+
+</body>
+</html>

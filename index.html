@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home TKJ</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:#0f172a;
+            color:white;
+        }
+
+        header{
+            text-align:center;
+            padding:20px;
+            background:#111827;
+            position:relative;
+        }
+
+        .logo{
+            width:70px;
+            position:absolute;
+            left:20px;
+            top:15px;
+            border-radius:10px;
+        }
+
+        nav{
+            background:#1f2937;
+            padding:12px;
+            text-align:center;
+            position:sticky;
+            top:0;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:8px 12px;
+            margin:5px;
+            border-radius:8px;
+            display:inline-block;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:#3b82f6;
+            transform:scale(1.05);
+        }
+
+        .container{
+            padding:20px;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:15px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.07);
+            padding:18px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:10px;
+        }
+
+        .box{
+            background:#1e293b;
+            padding:15px;
+            border-radius:10px;
+            text-align:center;
+        }
+
+        .box h2{
+            margin:0;
+            color:#60a5fa;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:10px;
+            padding:8px 12px;
+            background:#22c55e;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#16a34a;
+            transform:scale(1.05);
+        }
+
+        footer{
+            text-align:center;
+            padding:15px;
+            background:#111827;
+            margin-top:20px;
+        }
+
+        @media(max-width:600px){
+            .logo{
+                position:static;
+                display:block;
+                margin:auto;
+            }
+
+            .stats{
+                grid-template-columns:1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpeg" class="logo">
+    <h1>🏠 Dashboard TKJ</h1>
+    <p>Sistem Layanan Komputer & Jaringan</p>
+</header>
+
+<nav>
+    <a href="index.html" class="active">🏠 Home</a>
+    <a href="visimisi.html">🎯 Visi Misi</a>
+    <a href="layanan.html">🛠 Layanan</a>
+    <a href="kegiatan.html">🏢 Kegiatan</a>
+    <a href="request.html">📩 Request</a>
+    <a href="admin.html">🖥 Admin</a>
+    <a href="faq.html">❓ FAQ</a>
+</nav>
+
+<div class="container">
+
+    <!-- STATISTIK -->
+    <div class="card">
+        <h2>📊 Statistik Cepat</h2>
+
+        <div class="stats">
+
+            <div class="box">
+                <h2>128</h2>
+                <p>PC Ditangani</p>
+            </div>
+
+            <div class="box">
+                <h2>42</h2>
+                <p>Jaringan</p>
+            </div>
+
+            <div class="box">
+                <h2>95%</h2>
+                <p>Selesai</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- QUICK MENU -->
+    <div class="card">
+        <h2>⚡ Quick Menu</h2>
+
+        <a class="btn" href="request.html">📩 Buat Request</a><br>
+        <a class="btn" href="layanan.html">🛠 Lihat Layanan</a><br>
+        <a class="btn" href="faq.html">❓ FAQ</a>
+    </div>
+
+    <!-- STATUS SISTEM -->
+    <div class="card">
+        <h2>🟢 Status Sistem</h2>
+
+        <p>
+            🔌 Server: Online <br>
+            🌐 Jaringan: Stabil <br>
+            ⚙️ Sistem: Aktif <br>
+            🛠 Maintenance: Tidak ada
+        </p>
+    </div>
+
+    <!-- LAYANAN POPULER -->
+    <div class="card">
+        <h2>🔥 Layanan Populer</h2>
+
+        <p>
+            💻 Install Windows <br>
+            🖥 Perbaikan PC <br>
+            🌐 Instalasi Jaringan
+        </p>
+
+        <a class="btn" href="layanan.html">Lihat Semua</a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 TKJ Dashboard System
+</footer>
+
+</body>
+</html>

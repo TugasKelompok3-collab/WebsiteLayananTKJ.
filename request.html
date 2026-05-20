@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Layanan TKJ</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background: linear-gradient(135deg,#0f172a,#1e293b);
+            color:white;
+        }
+
+        header{
+            display:flex;
+            align-items:center;
+            gap:15px;
+            padding:15px;
+            background:#111827;
+            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .logo{
+            width:50px;
+            border-radius:10px;
+        }
+
+        nav{
+            display:flex;
+            gap:10px;
+            padding:10px;
+            background:#1f2937;
+            justify-content:center;
+            flex-wrap:wrap;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:8px 12px;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:#3b82f6;
+            transform:scale(1.05);
+        }
+
+        .container{
+            display:flex;
+            justify-content:center;
+            padding:40px;
+        }
+
+        form{
+            background:rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            padding:25px;
+            border-radius:15px;
+            width:320px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.4);
+            animation: fadeIn 0.6s ease;
+        }
+
+        input, select, textarea{
+            width:100%;
+            padding:10px;
+            margin:8px 0;
+            border:none;
+            border-radius:8px;
+            outline:none;
+            transition:0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus{
+            transform:scale(1.03);
+            box-shadow:0 0 10px #3b82f6;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            border:none;
+            border-radius:8px;
+            background:#3b82f6;
+            color:white;
+            cursor:pointer;
+            transition:0.3s;
+            font-weight:bold;
+        }
+
+        button:hover{
+            background:#2563eb;
+            transform:scale(1.05);
+        }
+
+        #toast{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:#22c55e;
+            padding:12px 18px;
+            border-radius:10px;
+            display:none;
+            box-shadow:0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        @keyframes fadeIn{
+            from{opacity:0; transform:translateY(20px);}
+            to{opacity:1; transform:translateY(0);}
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpeg" class="logo">
+    <h1>Request Layanan TKJ ⚙️</h1>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="visimisi.html">🎯 Visi Misi</a>
+    <a href="layanan.html">🛠 Layanan</a>
+    <a href="kegiatan.html">🏢 Kegiatan</a>
+    <a href="request.html" class="active">📩 Request</a>
+    <a href="admin.html">🖥 Admin</a>
+    <a href="faq.html">❓ FAQ</a>
+</nav>
+
+<div class="container">
+
+    <form onsubmit="return kirimData()">
+        <input type="text" id="nama" placeholder="Nama" required>
+        <input type="text" id="kelas" placeholder="Kelas" required>
+
+        <select id="layanan">
+            <option>Install Windows</option>
+            <option>Perbaikan PC</option>
+            <option>Instalasi Jaringan</option>
+            <option>Maintenance Lab</option>
+        </select>
+
+        <textarea id="deskripsi" placeholder="Deskripsi masalah"></textarea>
+
+        <button type="submit">🚀 Kirim Request</button>
+    </form>
+
+</div>
+
+<div id="toast"></div>
+
+<script>
+function kirimData() {
+    let nama = document.getElementById("nama").value;
+
+    let toast = document.getElementById("toast");
+    toast.innerHTML = "✅ Request " + nama + " berhasil dikirim!";
+    toast.style.display = "block";
+
+    setTimeout(() => {
+        toast.style.display = "none";
+    }, 3000);
+
+    return false;
+}
+</script>
+
+</body>
+</html>
