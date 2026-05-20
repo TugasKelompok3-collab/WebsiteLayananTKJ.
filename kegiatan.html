@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kegiatan TKJ</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#0f172a,#1e293b);
+            color:white;
+        }
+
+        header{
+            text-align:center;
+            padding:20px;
+            background:#111827;
+            box-shadow:0 5px 20px rgba(0,0,0,0.4);
+        }
+
+        .logo{
+            width:60px;
+            border-radius:10px;
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:10px;
+            padding:10px;
+            background:#1f2937;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:8px 12px;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:#3b82f6;
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:15px;
+            padding:20px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.07);
+            backdrop-filter:blur(10px);
+            padding:18px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
+            transition:0.3s;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .card:hover{
+            transform:translateY(-6px);
+            box-shadow:0 15px 30px rgba(59,130,246,0.3);
+        }
+
+        .card::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:4px;
+            height:100%;
+            background:#3b82f6;
+        }
+
+        .full{
+            grid-column:span 2;
+        }
+
+        h2,h3{
+            margin-top:0;
+        }
+
+        .tag{
+            display:inline-block;
+            font-size:12px;
+            padding:4px 10px;
+            border-radius:20px;
+            background:#3b82f6;
+            margin-bottom:8px;
+        }
+
+        footer{
+            text-align:center;
+            padding:15px;
+            background:#111827;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpeg" class="logo">
+    <h1>🏢 Kegiatan TKJ</h1>
+    <p>Aktivitas & Operasional Teknologi</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="visimisi.html">🎯 Visi Misi</a>
+    <a href="layanan.html">🛠 Layanan</a>
+    <a href="kegiatan.html" class="active">🏢 Kegiatan</a>
+    <a href="request.html">📩 Request</a>
+    <a href="admin.html">🖥 Admin</a>
+    <a href="faq.html">❓ FAQ</a>
+</nav>
+
+<div class="container">
+
+    <div class="card full">
+        <h2>📌 Overview Kegiatan</h2>
+        <p>
+            TKJ memiliki berbagai aktivitas rutin di bidang komputer dan jaringan
+            untuk meningkatkan kualitas layanan dan kemampuan teknis.
+        </p>
+    </div>
+
+    <div class="card">
+        <span class="tag">💻 Harian</span>
+        <h3>Maintenance Komputer</h3>
+        <p>Pengecekan dan perawatan komputer agar tetap optimal.</p>
+    </div>
+
+    <div class="card">
+        <span class="tag">🌐 Jaringan</span>
+        <h3>Instalasi Jaringan</h3>
+        <p>Setup LAN, WiFi, dan konfigurasi router sekolah.</p>
+    </div>
+
+    <div class="card">
+        <span class="tag">🛠 Hardware</span>
+        <h3>Service Perangkat</h3>
+        <p>Perbaikan RAM, HDD, motherboard, dan PSU.</p>
+    </div>
+
+    <div class="card">
+        <span class="tag">📚 Edukasi</span>
+        <h3>Pelatihan Teknologi</h3>
+        <p>Training dasar komputer & jaringan untuk siswa PKL.</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Kegiatan TKJ System
+</footer>
+
+</body>
+</html>

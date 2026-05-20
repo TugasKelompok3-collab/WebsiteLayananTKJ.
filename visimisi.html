@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visi Misi TKJ</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#0f172a,#1e293b);
+            color:white;
+        }
+
+        header{
+            text-align:center;
+            padding:20px;
+            background:#111827;
+            box-shadow:0 5px 20px rgba(0,0,0,0.4);
+        }
+
+        .logo{
+            width:60px;
+            border-radius:10px;
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:10px;
+            padding:10px;
+            background:#1f2937;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:8px 12px;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:#3b82f6;
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:15px;
+            padding:20px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.07);
+            backdrop-filter:blur(10px);
+            padding:18px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
+            transition:0.3s;
+            animation:fade 0.6s ease;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        h2{
+            margin-top:0;
+            color:#60a5fa;
+        }
+
+        ul{
+            padding-left:0;
+            list-style:none;
+        }
+
+        ul li{
+            padding:8px;
+            margin:5px 0;
+            background:rgba(255,255,255,0.05);
+            border-radius:10px;
+            transition:0.3s;
+        }
+
+        ul li:hover{
+            background:#1d4ed8;
+            transform:translateX(5px);
+        }
+
+        .keahlian p{
+            line-height:1.8;
+        }
+
+        footer{
+            text-align:center;
+            padding:15px;
+            background:#111827;
+            margin-top:20px;
+        }
+
+        @keyframes fade{
+            from{opacity:0; transform:translateY(20px);}
+            to{opacity:1; transform:translateY(0);}
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.jpeg" class="logo">
+    <h1>Visi & Misi TKJ 🎯</h1>
+    <p>Teknik Komputer dan Jaringan</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="visimisi.html" class="active">🎯 Visi Misi</a>
+    <a href="layanan.html">🛠 Layanan</a>
+    <a href="kegiatan.html">🏢 Kegiatan</a>
+    <a href="request.html">📩 Request</a>
+    <a href="admin.html">🖥 Admin</a>
+    <a href="faq.html">❓ FAQ</a>
+</nav>
+
+<div class="container">
+
+    <!-- VISI -->
+    <div class="card">
+        <h2>🎯 Visi</h2>
+        <p>
+            Menjadi layanan TKJ yang unggul, modern, kreatif, 
+            dan terpercaya dalam bidang komputer serta jaringan.
+        </p>
+    </div>
+
+    <!-- MISI -->
+    <div class="card">
+        <h2>🚀 Misi</h2>
+        <ul>
+            <li>✅ Memberikan pelayanan terbaik di bidang IT</li>
+            <li>✅ Membantu instalasi & perbaikan komputer</li>
+            <li>✅ Mengembangkan jaringan yang aman & stabil</li>
+            <li>✅ Meningkatkan skill teknologi siswa</li>
+            <li>✅ Memberikan layanan cepat & profesional</li>
+        </ul>
+    </div>
+
+    <!-- KEAHLIAN -->
+    <div class="card keahlian">
+        <h2>🛠 Keahlian TKJ</h2>
+        <p>
+            • Install Windows<br>
+            • Setting Jaringan<br>
+            • Perbaikan Hardware<br>
+            • Crimping Kabel LAN<br>
+            • Konfigurasi Router
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 TKJ Service
+</footer>
+
+</body>
+</html>
